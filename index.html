@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Washify Laundry - Layanan laundry antar jemput, cepat, higienis, dan terpercaya di kota Anda. Pesan mudah, bersih maksimal. One Tap to Clean.">
+  <meta name="keywords" content="laundry terdekat, jasa laundry, laundry antar jemput, cuci setrika, laundry cepat, Washify">
+  <meta name="author" content="Washify Laundry">
+  <title>Laundry Terdekat & Antar Jemput | Washify Laundry</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="pafi.png" type="image/x-icon">
+</head>
+  <!-- Header -->
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="Logo">
+        Washify Laundry
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#layanan">Layanan</a></li>
+        <li><a href="#harga">Harga</a></li>
+        <li><a href="#pesan">Pesan</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger">
+        <span id="burger-icon">☰</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="beranda" class="hero">
+    <div class="container">
+      <h1>One Tap to Clean.</h1>
+      <p>Laundry jadi semudah klik! Antar-jemput cepat, hasil bersih maksimal. Washify, revolusi laundry masa kini.</p>
+      <a href="#pesan" class="btn">Pesan Sekarang</a>
+    </div>
+  </section>
+
+  <!-- Tentang Kami -->
+  <section id="tentang" class="about">
+    <div class="container">
+      <h3><strong>Tentang Kami</strong></h3>
+      <p><strong>Washify Laundry</strong> adalah solusi laundry modern yang hadir untuk menjawab kebutuhan Anda akan layanan pencucian pakaian yang cepat, bersih, dan terpercaya. Kami memahami bahwa waktu Anda sangat berharga — karena itu, kami hadir dengan sistem layanan yang efisien dan berkualitas tinggi, mulai dari laundry kiloan, setrika, hingga layanan antar-jemput langsung ke rumah Anda.
+      <br><br>
+      Dengan mengusung slogan <strong>“One Tap to Clean”</strong>, Washify menggabungkan teknologi dan kenyamanan dalam satu layanan laundry yang mudah dijangkau oleh semua kalangan. Kami menggunakan peralatan modern, deterjen ramah lingkungan, dan tenaga profesional untuk memastikan setiap helai pakaian Anda mendapatkan perawatan terbaik.
+      <br><br>
+      <strong>Kami tidak hanya mencuci pakaian — kami merawatnya dengan penuh tanggung jawab, seolah-olah itu milik kami sendiri.</strong></p>
+    </div>
+  </section>
+
+  <!-- Layanan Unggulan -->
+  <section id="layanan" class="fitur">
+    <div class="container">
+      <h3>Keunggulan Kami</h3>
+      <div class="fitur-box">
+        <div class="item">🚗 Layanan Antar Jemput</div>
+        <div class="item">🚀 Cepat & Tepat Waktu</div>
+        <div class="item">🍃 Bersih, Wangi & Higienis</div>
+        <div class="item">✅ Cocok untuk Rumah Tangga, Kantor, dan Kos-kosan</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Harga -->
+  <section id="harga" class="harga">
+    <div class="container">
+      <h3>Daftar Harga</h3>
+      <table>
+        <tr><th>Layanan</th><th>Harga</th></tr>
+        <tr><td>Cuci Kering</td><td>Rp 3.000 / kg</td></tr>
+        <tr><td>Cuci Setrika</td><td>Rp 5.000 / kg</td></tr>
+        <tr><td>Cuci Lipat</td><td>Rp 3.000 / kg</td></tr>
+        <tr><td>Selimut / Bed Cover</td><td>Rp 25.000 / pcs</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- Form Pemesanan -->
+  <section id="pesan" class="pesan">
+    <div class="container">
+      <h3>Form Pemesanan</h3>
+      <form id="orderForm" class="order">
+        <label>Nama:</label>
+        <input type="text" placeholder="Masukkan Nama Anda" name="nama" required>
+        <label>No. HP:</label>
+        <input type="tel" name="hp" placeholder="Nomor HP" required pattern="[0-9]+" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+        <label>Alamat Jemput:</label>
+        <textarea name="alamat" placeholder="Masukkan Alamat Anda" required></textarea>
+        <label>Jenis Layanan:</label>
+        <select name="layanan">
+          <option>Cuci Kering</option>
+          <option>Cuci Setrika</option>
+          <option>Setrika Saja</option>
+          <option>Selimut</option>
+        </select>
+        <button type="submit" class="btn">Kirim Pesanan</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Washify Laundry. Bersih & Harum. One Tap to Clean.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <!-- ... konten HTML di atas ... -->
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("navLinks");
+  const burgerIcon = document.getElementById("burger-icon");
+  const navItems = document.querySelectorAll("#navLinks a");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    burgerIcon.textContent = navLinks.classList.contains("show") ? "✖" : "☰";
+  });
+
+  // Tutup menu saat salah satu link diklik
+  navItems.forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("show");
+      burgerIcon.textContent = "☰";
+    });
+  });
+
+  // Jika layar diperbesar, pastikan menu ditampilkan kembali
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+      navLinks.classList.remove("show");
+      burgerIcon.textContent = "☰";
+    }
+  });
+</script>
+<script>
+  // Ambil semua link dengan href yang dimulai dengan #
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+</body>
+</html>

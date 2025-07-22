@@ -1,0 +1,396 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9fcff;
+  color: #003366;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: white; /* Atur warna background agar tidak transparan saat sticky */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Opsional: bayangan saat sticky */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 24px;
+  position: relative;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  background-color: #fff; /* atau sesuai desain kamu */
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #003366;
+  font-weight: 500;
+  left: -60px;
+  position: relative;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #00bfff;
+  transition: width 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: #00bfff;
+}
+
+.nav-menu li a:hover::after {
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.logo img {
+  height: 60px; /* atau sesuai ukuran logo kamu */
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('laun.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  color: white;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.btn-utama {
+  background-color: #1e90ff;
+  padding: 12px 30px;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-utama:hover {
+  background-color: #0077cc;
+}
+
+.hero-text {
+  padding: 80px 20px 40px;
+}
+
+.hero .hero-text {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.btn {
+  background: #007BFF;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.about-section {
+  position: relative;
+  background-color: #00aaff;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+.about {
+  scroll-margin-top: 80px;
+}
+
+.fitur {
+  scroll-margin-top: 80px;
+}
+
+.harga {
+  scroll-margin-top: 80pxx;
+}
+
+.pesan {
+  scroll-margin-top: 80px;
+}
+
+.about .container {
+  position: relative;
+  z-index: 9;
+  font-size: medium;
+  color: #012d5c;
+}
+
+.about, .fitur, .harga, .pesan {
+  background: white;
+  padding: 60px 90px;
+  text-align: center;
+}
+
+.order {
+  text-align: left;
+  font-weight: bolder;
+}
+
+.fitur-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.item {
+  background-color: #cceeff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #99cfff;
+}
+
+th, td {
+  padding: 12px;
+}
+
+.pesan form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.pesan input, .pesan textarea, .pesan select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+footer {
+  background: #007BFF;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Tombol hamburger */
+.hamburger {
+  display: none;
+}
+
+/* Tombol X (close) */
+.close-btn {
+  font-size: 24px;
+  text-align: right;
+  cursor: pointer;
+  color: #003366;
+  display: none;
+}
+
+/* Menu navigasi */
+.nav-menu {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 999;
+}
+
+.nav-menu.show {
+  display: block;
+}
+
+.nav-menu li {
+  margin: 10px 0;
+  list-style: none;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #003366;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #00bfff;
+}
+
+/* Desktop Navigation */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #003366;
+  font-weight: 500;
+  padding: 8px 0;
+  position: relative;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #00bfff;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #003366;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+  }
+
+  .nav-links li {
+    margin: 5px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+}
