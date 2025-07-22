@@ -180,6 +180,24 @@ html {
   scroll-margin-top: 80px;
 }
 
+.alamat {
+  background: #007BFF;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.alamat a {
+  text-decoration: none;
+  color: #fff;
+  list-style: none;
+}
+
 .about .container {
   position: relative;
   z-index: 9;
